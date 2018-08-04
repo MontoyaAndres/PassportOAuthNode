@@ -1,0 +1,26 @@
+{
+  "name": "passportoauthnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MontoyaAndres/PassportOAuthNode.git"
+  },
+  "keywords": [
+    "passport",
+    "node",
+    "express",
+    "oauth",
+    "auth"
+  ],
+  "author": "Andrés Montoya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MontoyaAndres/PassportOAuthNode/issues"
+  },
+  "homepage": "https://github.com/MontoyaAndres/PassportOAuthNode#readme"
+}

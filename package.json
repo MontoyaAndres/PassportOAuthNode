@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "dev": "NODE_ENV=development nodemon --exec babel-node src/index.js",
+    "build": "rm -r dist && babel src -d dist",
+    "start": "NODE_ENV=production node dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,15 @@
   "bugs": {
     "url": "https://github.com/MontoyaAndres/PassportOAuthNode/issues"
   },
-  "homepage": "https://github.com/MontoyaAndres/PassportOAuthNode#readme"
+  "homepage": "https://github.com/MontoyaAndres/PassportOAuthNode#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.3"
+  }
 }

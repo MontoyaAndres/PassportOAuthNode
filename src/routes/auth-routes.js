@@ -7,7 +7,7 @@ Router
   .get('/login', (req, res) => {
     res.render('login');
   })
-  .get('logout', (req, res) => {
+  .get('/logout', (req, res) => {
     res.send('logout');
   })
   .get('/google', (req, res) => {

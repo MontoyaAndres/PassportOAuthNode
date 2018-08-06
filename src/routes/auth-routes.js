@@ -7,10 +7,11 @@ const Router = express.Router();
 
 // Auth login
 Router.get("/login", (req, res) => {
-  res.render("login");
+  res.render("login", { user: req.user });
 })
   .get("/logout", (req, res) => {
-    res.send("logout");
+    req.logout();
+    res.redirect("/");
   })
   .get(
     "/google",
@@ -19,7 +20,7 @@ Router.get("/login", (req, res) => {
     })
   )
   .get("/google/redirect", passport.authenticate("google"), (req, res) => {
-    res.send("you reached the callback URL");
+    res.redirect("/profile");
   });
 
 export default Router;

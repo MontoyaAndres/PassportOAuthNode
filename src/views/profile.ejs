@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login</title>
+  <title>Profile</title>
   <style>
     body {
       font-family: arial;
@@ -46,12 +46,15 @@
       color: #333;
     }
 
-    .google-btn {
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-      padding: 10px;
-      background: #ff5353;
+    main img {
+      width: 40px;
+      margin-right: 10px;
+      position: relative;
+      top: 12px;
+    }
+
+    main p {
+      display: inline-block;
     }
   </style>
 </head>
@@ -77,10 +80,13 @@
     </ul>
   </nav>
   <header>
-    <h1>Login using...</h1>
+    <h1>Welcome to your profile,
+      <%= user.username %>
+    </h1>
   </header>
   <main>
-    <a class="google-btn" href="/auth/google">Google+</a>
+    <img src="<%= user.thumbnail %>" />
+    <p>This is your profile thumbnail</p>
   </main>
 </body>
 
